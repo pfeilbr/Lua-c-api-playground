@@ -11,7 +11,23 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <lua.hpp>
+
+/*
+
+may need to change to `#include <lua.hpp>` depending on include path
+
+`/usr/local/include` is in include path.  `lua` is subdirectory
+
+tree /usr/local/include/lua
+/usr/local/include/lua
+├── lauxlib.h
+├── lua.h
+├── lua.hpp
+├── luaconf.h
+└── lualib.h
+
+*/
+#include <lua/lua.hpp>
 
 // call the print function with a string argument
 static void printExample(lua_State *L) {
